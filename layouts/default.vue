@@ -1,7 +1,10 @@
 <template>
-  <div class="py-11 px-[33px]">
+  <div class="py-11 px-[33px] flex items-start gap-10">
     <Sidebar />
-    <Nuxt />
+    <div class="container">
+      <Breadcrumb class="mb-5" />
+      <Nuxt />
+    </div>
   </div>
 </template>
 

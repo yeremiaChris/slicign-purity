@@ -4,12 +4,12 @@
       v-for="(item, index) in data"
       :key="item.title + index"
       :to="item.path"
-      class="flex items-center gap-3 px-3 py-3 rounded-[15px] mb-2 hover:bg-white hover:shadow-[0_3.5px_5.5px_rgba(0, 0, 0, 0.02)]"
-      :class="{ 'bg-white shadow-link': isActiveRoute(item.path) }"
+      class="flex items-center gap-3 px-3 py-3 rounded-[15px] mb-2 hover:bg-white hover:shadow-smooth"
+      :class="{ 'bg-white shadow-smooth': isActiveRoute(item.path) }"
     >
       <div
         :class="`w-[30px] box-center px-2 py-2 h-[30px] ${
-          isActiveRoute(item.path) ? 'bg-[#4FD1C5]' : 'bg-white shadow-link'
+          isActiveRoute(item.path) ? 'bg-[#4FD1C5]' : 'bg-white shadow-smooth'
         } rounded-full`"
       >
         <img
@@ -49,5 +49,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

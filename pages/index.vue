@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-red-400"></div>
+  <div>
+    <DashboardAnalyticCard />
+  </div>
 </template>
 
 <script>

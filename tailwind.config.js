@@ -8,9 +8,17 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1.5rem",
+        sm: "1.5rem",
+        lg: "2rem",
+      },
+    },
     extend: {
       boxShadow: {
-        sidebar: "0px 3.5px 5.5px rgba(0, 0, 0, 0.02)",
+        smooth: "0px 3.5px 5.5px rgba(0, 0, 0, 0.02)",
       },
     },
   },
