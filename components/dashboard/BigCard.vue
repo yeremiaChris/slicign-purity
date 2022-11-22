@@ -29,6 +29,7 @@
         />chakra
       </div>
     </div>
+
     <!-- card 2 -->
     <div class="flex-1 col-span-2 w-full h-full block">
       <div class="grid lg:mt-0 rounded-[15px] px-3 py-3 bg-white">

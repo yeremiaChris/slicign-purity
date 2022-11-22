@@ -1,6 +1,7 @@
 <template>
   <div class="grid lg:grid-cols-5 gap-5">
-    <div class="lg:col-span-2 bg-white px-4 py-4">
+    <!-- chart 1 -->
+    <div class="lg:col-span-2 bg-white px-4 py-4 rounded-[15px]">
       <client-only>
         <BarChart :data="chartData" :height="222" />
       </client-only>
@@ -30,7 +31,9 @@
         </div>
       </div>
     </div>
-    <div class="lg:col-span-3 bg-white px-4 py-4">
+
+    <!-- chart 2 -->
+    <div class="lg:col-span-3 bg-white px-4 py-4 rounded-[15px]">
       <client-only>
         <LineChart :data="chartData" class="h-full" />
       </client-only>

@@ -3,6 +3,7 @@
     <DashboardAnalyticCard />
     <DashboardBigCard />
     <DashboardChartCard />
+    <DashboardContentCard />
   </div>
 </template>
 
