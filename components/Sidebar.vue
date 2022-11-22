@@ -1,5 +1,5 @@
 <template>
-  <div class="w-[246px]">
+  <div class="w-[246px] sticky top-11">
     <!-- logo -->
     <div class="box-center gap-4">
       <img src="logo.png" alt="logo" />
