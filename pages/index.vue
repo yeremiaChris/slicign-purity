@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="grid gap-4">
     <DashboardAnalyticCard />
+    <DashboardBigCard />
   </div>
 </template>
 

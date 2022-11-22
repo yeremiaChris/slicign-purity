@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-4 gap-5">
+  <div class="grid lg:grid-cols-3 xl:grid-cols-4 gap-5">
     <div
       class="container-card"
       v-for="(card, index) in cards"
