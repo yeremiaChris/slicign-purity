@@ -17,14 +17,6 @@ Vue.component("BarChart", {
         legend: {
           display: false,
         },
-        scales: {
-          xAxes: [
-            {
-              barThickness: 6, // number (pixels) or 'flex'
-              maxBarThickness: 8, // number (pixels)
-            },
-          ],
-        },
       }),
     },
   },

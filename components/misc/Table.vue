@@ -45,7 +45,7 @@
                       v-for="num in value"
                       :key="num"
                       :src="`https://picsum.photos/id/${num}/20/20`"
-                      class="w-5 h-5 rounded-full bg-white px-[2px] py-[2px]"
+                      class="w-5 h-5 rounded-full bg-white p-[2px]"
                       :class="{ '-ml-2': num > 1 }"
                     />
                   </div>

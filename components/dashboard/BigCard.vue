@@ -34,7 +34,7 @@
           style="background-image: url(/main/undsplash.jpg)"
         >
           <div
-            class="absolute inset-0 flex flex-col gap-4 justify-between shadow-black w-full px-5 py-5 rounded-[15px]"
+            class="absolute inset-0 flex flex-col gap-4 justify-between shadow-black w-full p-5 rounded-[15px]"
           >
             <div>
               <h2 class="title">Work with the Rockets</h2>

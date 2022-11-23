@@ -70,7 +70,7 @@ export default {
             backgroundColor: "white",
             borderColor: "white",
             borderWidth: 2,
-            borderRadius: Number.MAX_VALUE,
+            barThickness: 6,
           },
         ],
       };

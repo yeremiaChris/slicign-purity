@@ -20,7 +20,7 @@
 
     <!-- kotak -->
     <div
-      class="w-[218px] relative bg-[#4FD1C5] mt-[60px] rounded-[15px] px-4 py-4 text-white"
+      class="w-[218px] relative bg-[#4FD1C5] mt-[60px] rounded-[15px] p-4 text-white"
     >
       <img src="/sidebar/question-mark.png" alt="question-mark" />
       <h2 class="text-sm font-bold mt-[21.5px]">Need Help ?</h2>

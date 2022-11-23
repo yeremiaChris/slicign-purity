@@ -1,7 +1,13 @@
 <template>
   <div>
-    <p class="text-xs">
-      <span class="text-gray-500">Pages</span> / {{ title }}
+    <p class="text-xs font-bold">
+      <span
+        :class="`${
+          !$route.path.includes('profile') ? 'text-gray-500' : 'text-white'
+        }`"
+        >Pages</span
+      >
+      / {{ title }}
     </p>
     <p class="text-sm mt-[5px] font-bold">{{ title }}</p>
   </div>
