@@ -1,12 +1,12 @@
 <template>
-  <div class="grid lg:grid-cols-5 gap-5">
+  <div class="flex flex-col xl:grid xl:grid-cols-5 gap-5">
     <!-- chart 1 -->
-    <div class="lg:col-span-2 container-card">
+    <div class="xl:col-span-2 container-card w-full">
       <client-only>
         <BarChart
           :data="chartData"
           :height="200"
-          class="bar-chart-bg p-5 rounded-[15px] w-full"
+          class="bar-chart-bg p-5 rounded-[15px]"
         />
       </client-only>
       <div class="mt-6">
@@ -15,7 +15,7 @@
           <span class="text-[#48BB78]">(+23)</span> than last week
         </p>
       </div>
-      <div class="grid grid-cols-4 mt-[36.5px] gap-14">
+      <div class="grid xl:grid-cols-4 mt-[36.5px] gap-14">
         <!-- lists -->
         <div v-for="item in 4" :key="item">
           <div class="flex-items-center gap-3">
@@ -43,7 +43,7 @@
         <span class="text-[#48BB78]">(+23)</span> than last week
       </p>
       <client-only>
-        <LineChart :data="chartDataLine" class="w-full" :height="296" />
+        <LineChart :data="chartDataLine" :height="296" />
       </client-only>
     </div>
   </div>
