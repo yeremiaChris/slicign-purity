@@ -27,3 +27,7 @@ body {
 .title {
   @apply text-lg font-bold;
 }
+
+.bar-chart-bg {
+  background: linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%);
+}

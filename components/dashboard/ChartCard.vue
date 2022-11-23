@@ -92,9 +92,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.bar-chart-bg {
-  background: linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%);
-}
-</style>
