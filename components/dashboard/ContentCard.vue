@@ -1,7 +1,7 @@
 <template>
-  <div class="grid lg:grid-cols-5 items-start gap-5">
+  <div class="flex flex-col lg:grid lg:grid-cols-5 items-start gap-5">
     <!-- content 1 -->
-    <div class="col-span-3 container-card">
+    <div class="col-span-3 container-card w-full">
       <!-- title -->
       <h2 class="title">Projects</h2>
 
@@ -17,7 +17,7 @@
     </div>
 
     <!-- content 2 -->
-    <div class="col-span-2 container-card">
+    <div class="col-span-2 container-card w-full">
       <!-- title -->
       <h2 class="title">Orders overview</h2>
 
