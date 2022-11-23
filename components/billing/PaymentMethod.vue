@@ -8,7 +8,7 @@
         Add new card
       </button>
     </div>
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid md:grid-cols-2 gap-4">
       <MiscInput />
       <MiscInput icon="visa" />
     </div>

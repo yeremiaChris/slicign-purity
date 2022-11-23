@@ -1,10 +1,10 @@
 <template>
   <div class="grid gap-4">
     <!-- card 1 -->
-    <div class="grid grid-cols-5 gap-4">
+    <div class="flex flex-col lg:grid lg:grid-cols-5 gap-4">
       <div class="col-span-3 flex flex-col gap-4">
         <!-- credit card and 2 boxes -->
-        <div class="col-span-3 grid grid-cols-4 gap-4">
+        <div class="col-span-3 grid md:grid-cols-4 gap-4">
           <!-- credit card -->
           <BillingCreditCard />
 
@@ -21,7 +21,7 @@
     </div>
 
     <!-- card 2 -->
-    <div class="grid grid-cols-7 gap-4">
+    <div class="flex flex-col lg:grid lg:grid-cols-7 gap-4">
       <!-- billing information -->
       <div class="col-span-4 container-card">
         <MiscTitle title="Billing Information" />
