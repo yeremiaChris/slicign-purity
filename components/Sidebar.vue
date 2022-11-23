@@ -59,10 +59,10 @@ export default {
           title: "Billing",
           path: "/billing",
         },
-        {
-          title: "RTL",
-          path: "/rtl",
-        },
+        // {
+        //   title: "RTL",
+        //   path: "/rtl",
+        // },
       ],
       accountPages: [
         {
