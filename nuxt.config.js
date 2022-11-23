@@ -27,7 +27,18 @@ export default {
   buildModules: ["@nuxt/postcss8"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/dayjs"],
+
+  // dayjs
+  dayjs: {
+    locales: ["en", "ja"],
+    defaultLocale: "en",
+    defaultTimeZone: "Asia/Tokyo",
+    plugins: [
+      "utc", // import 'dayjs/plugin/utc'
+      "timezone", // import 'dayjs/plugin/timezone'
+    ], // Your Day.js plugin
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
