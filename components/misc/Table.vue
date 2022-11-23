@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 flex flex-col">
+  <div class="flex flex-col">
     <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
         <div class="overflow-hidden md:rounded-lg">
@@ -10,7 +10,7 @@
                   v-for="item in header"
                   :key="item"
                   scope="col"
-                  class="py-3.5 pl-4 pr-3 text-left text-[10px] font-bold text-[#A0AEC0] sm:pl-6"
+                  class="py-3.5 text-left text-[10px] font-bold text-[#A0AEC0]"
                 >
                   {{ item }}
                 </th>
@@ -21,7 +21,7 @@
                 <td
                   v-for="(value, key) in item"
                   :key="key"
-                  class="whitespace-nowrap text-sm text-[#2D3748] font-bold py-4 pl-4 pr-3 sm:pl-6"
+                  class="whitespace-nowrap text-sm text-[#2D3748] font-bold py-4"
                 >
                   <!-- companies -->
                   <div
