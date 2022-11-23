@@ -4,7 +4,7 @@
       v-for="(item, index) in data"
       :key="item.title + index"
       :to="item.path"
-      class="flex items-center gap-3 px-3 py-3 rounded-[15px] mb-2 hover:bg-white hover:shadow-smooth"
+      class="flex-items-center gap-3 px-3 py-3 rounded-[15px] mb-2 hover:bg-white hover:shadow-smooth"
       :class="{ 'bg-white shadow-smooth': isActiveRoute(item.path) }"
     >
       <div

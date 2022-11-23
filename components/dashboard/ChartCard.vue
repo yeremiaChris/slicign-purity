@@ -1,12 +1,12 @@
 <template>
   <div class="grid lg:grid-cols-5 gap-5">
     <!-- chart 1 -->
-    <div class="lg:col-span-2 bg-white px-4 py-4 rounded-[15px]">
+    <div class="lg:col-span-2 container-card">
       <client-only>
         <BarChart :data="chartData" :height="222" />
       </client-only>
       <div>
-        <h2 class="text-lg font-bold text-[#2D3748]">Active Users</h2>
+        <h2 class="title text-[#2D3748]">Active Users</h2>
         <p class="text-sm mt-1.5 text-[#2D3748]">
           <span class="text-[#48BB78]">(+23)</span> than last week
         </p>
@@ -14,7 +14,7 @@
       <div class="grid grid-cols-4 mt-[36.5px] gap-14">
         <!-- lists -->
         <div v-for="item in 4" :key="item">
-          <div class="flex items-center gap-3">
+          <div class="flex-items-center gap-3">
             <div
               class="bg-[#4FD1C5] h-[25px] w-[25px] px-[5px] py-[5px] box-center rounded-md"
             >
@@ -23,7 +23,7 @@
             <p class="text-[#A0AEC0] text-xs">Users</p>
           </div>
 
-          <p class="text-lg font-bold mt-[5.5px]">32,984</p>
+          <p class="title mt-[5.5px]">32,984</p>
 
           <div class="bg-[#E2E8F0] w-full h-[3px] mt-1.5">
             <div class="w-[40%] h-[3px] bg-[#4FD1C5]" />
@@ -33,7 +33,7 @@
     </div>
 
     <!-- chart 2 -->
-    <div class="lg:col-span-3 bg-white px-4 py-4 rounded-[15px]">
+    <div class="lg:col-span-3 container-card">
       <client-only>
         <LineChart :data="chartData" class="h-full" />
       </client-only>

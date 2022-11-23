@@ -23,9 +23,10 @@
                   :key="key"
                   class="whitespace-nowrap text-sm text-[#2D3748] font-bold py-4 pl-4 pr-3 sm:pl-6"
                 >
+                  <!-- companies -->
                   <div
                     v-if="key === 'companies'"
-                    class="flex items-center gap-3"
+                    class="flex-items-center gap-3"
                   >
                     <img
                       class="rounded-lg"
@@ -34,6 +35,8 @@
                     />
                     {{ value }}
                   </div>
+
+                  <!-- members -->
                   <div v-else-if="key === 'members'" class="flex">
                     <img
                       v-for="num in value"
@@ -43,9 +46,13 @@
                       :class="{ '-ml-2': num > 1 }"
                     />
                   </div>
+
+                  <!-- budget -->
                   <div v-else-if="key === 'budget'">
                     ${{ value.toLocaleString() }}
                   </div>
+
+                  <!-- completion -->
                   <div
                     v-else-if="key === 'completion'"
                     class="text-[#4FD1C5] pr-8"
@@ -58,6 +65,8 @@
                       />
                     </div>
                   </div>
+
+                  <!-- default -->
                   <p v-else>
                     {{ value }}
                   </p>

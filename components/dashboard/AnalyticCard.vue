@@ -1,13 +1,13 @@
 <template>
   <div class="grid lg:grid-cols-3 xl:grid-cols-4 gap-5">
     <div
-      class="container-card"
+      class="container-card justify-between flex"
       v-for="(card, index) in cards"
       :key="card.title + index"
     >
       <div>
         <h2 class="text-xs text-[#A0AEC0] mb-px">{{ card.title }}</h2>
-        <h2 class="text-lg font-bold">
+        <h2 class="title">
           ${{ card.value.toLocaleString() }}
           <span
             :class="`text-sm ${
@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style scoped>
-.container-card {
-  @apply flex py-4 px-[17px] justify-between bg-white rounded-[15px] shadow-smooth;
-}
+/* .container-card {
+  @apply py-4 px-[17px] bg-white rounded-[15px] shadow-smooth;
+} */
 </style>
