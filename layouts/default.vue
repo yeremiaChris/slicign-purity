@@ -4,10 +4,7 @@
     <div class="container">
       <Breadcrumb class="mb-5" />
       <Nuxt />
+      <Footer />
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>

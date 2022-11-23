@@ -6,7 +6,7 @@
         <BarChart
           :data="chartData"
           :height="200"
-          class="bar-chart-bg p-5 rounded-[15px]"
+          class="bar-chart-bg p-5 rounded-[15px] w-full"
         />
       </client-only>
       <div class="mt-6">

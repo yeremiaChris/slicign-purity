@@ -14,7 +14,7 @@ export default {
       const path = this.$route.path;
       return path === "/"
         ? "Dashboard"
-        : path.charAt(0).toUpperCase() + path.slice(1);
+        : path.replace("/", "").charAt(0).toUpperCase() + path.slice(2);
     },
   },
 };
