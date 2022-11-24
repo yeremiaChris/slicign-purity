@@ -4,10 +4,11 @@
       <div class="box-card" v-for="item in data" :key="item.title">
         <h2 class="text-[#A0AEC0] text-[10px]">{{ item.title }}</h2>
         <div
-          class="flex-items-center justify-between"
+          class="md:flex items-center justify-between"
           v-for="child in item.child"
           :key="child.title"
         >
+          <!-- card content -->
           <div class="flex-items-center gap-4">
             <div
               :class="`w-[35px] h-[35px] border ${
@@ -35,6 +36,8 @@
               </h3>
             </div>
           </div>
+
+          <!-- num value -->
           <p
             :class="`${
               !child.value
@@ -42,7 +45,7 @@
                 : child.value <= 0
                 ? 'text-[#E53E3E]'
                 : 'text-[#48BB78]'
-            } text-sm font-bold`"
+            } text-sm font-bold mt-4 md:mt-0`"
           >
             {{ numToTitle(child.value) }}
           </p>

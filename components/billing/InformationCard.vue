@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-[#F8F9FA] flex justify-between rounded-xl py-[26px] px-[27px]">
+  <div
+    class="bg-[#F8F9FA] md:flex justify-between rounded-xl py-[26px] px-[27px]"
+  >
     <!-- information -->
     <div class="text-sm">
       <h2 class="text-[#718096] font-bold">Oliver Liam</h2>
@@ -12,7 +14,7 @@
     </div>
 
     <!-- button -->
-    <div class="flex gap-7 -mt-14">
+    <div class="flex gap-7 mt-6 md:-mt-14">
       <button class="flex-items-center gap-2 text-[10px] text-[#E53E3E]">
         <img src="/main/delete.png" alt="delete" />
         <span class="mt-1">Delete</span>

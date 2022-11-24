@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative overflow-hidden col-span-2 bar-chart-bg rounded-[15px] py-[22px] px-[31px] text-white"
+    class="relative overflow-hidden sm:col-span-2 bar-chart-bg rounded-[15px] py-[22px] px-[31px] text-white"
   >
     <div class="flex-items-center justify-between gap-3">
       <h2 class="title">Purity UI</h2>
