@@ -21,9 +21,12 @@
         class="block overflow-hidden h-[18.5px] rounded-full bg-gray-300 cursor-pointer"
       ></label>
     </div>
-    <label v-if="title" :for="id" class="text-xs text-[#A0AEC0] font-bold">{{
-      title
-    }}</label>
+    <label
+      v-if="title"
+      :for="id"
+      :class="`text-xs ${!color ? 'text-[#A0AEC0]' : color} font-bold`"
+      >{{ title }}</label
+    >
   </div>
 </template>
 
@@ -43,6 +46,10 @@ export default {
       },
     },
     title: {
+      type: String,
+      default: () => "",
+    },
+    color: {
       type: String,
       default: () => "",
     },

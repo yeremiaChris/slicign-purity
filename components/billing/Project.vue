@@ -29,7 +29,9 @@
       <div
         class="h-[300px] lg:h-full border border-[#E0E1E2] rounded-[15px] box-center"
       >
-        <div class="text-center flex flex-col justify-center items-center">
+        <div
+          class="text-center flex flex-col justify-center items-center cursor-pointer"
+        >
           <img src="/main/add.png" alt="add" />
           <p class="title text-[#718096] font-bold">Create a New Project</p>
         </div>

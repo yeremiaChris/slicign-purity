@@ -9,7 +9,7 @@
       </button>
     </div>
     <div class="grid md:grid-cols-2 gap-4">
-      <MiscInput />
+      <MiscInput icon="paypal" />
       <MiscInput icon="visa" />
     </div>
   </div>
