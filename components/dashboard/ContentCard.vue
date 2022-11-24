@@ -1,23 +1,20 @@
 <template>
-  <div class="flex flex-col lg:grid lg:grid-cols-5 items-start gap-5">
+  <div class="grid grid-cols-1 lg:grid-cols-5 items-start gap-5">
     <!-- content 1 -->
-    <div class="col-span-3 container-card w-full">
-      <!-- title -->
+    <div class="lg:col-span-3 container-card w-full">
       <h2 class="title">Projects</h2>
 
-      <!-- description -->
       <div class="flex-items-center gap-1">
         <img src="/main/checklist.png" alt="check-list" />
 
         <p class="text-[#A0AEC0] text-sm mt-1 font-bold">30 done this month</p>
       </div>
 
-      <!-- tables -->
       <MiscTable :header="header" :data="data" class="mt-8" />
     </div>
 
     <!-- content 2 -->
-    <div class="col-span-2 container-card w-full">
+    <div class="lg:col-span-2 container-card">
       <!-- title -->
       <h2 class="title">Orders overview</h2>
 

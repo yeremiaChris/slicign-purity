@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col lg:grid lg:grid-cols-5 gap-5 h-full w-full">
     <!-- card 1 -->
-    <div class="grid grid-cols-2 gap-8 col-span-3 container-card">
+    <div class="grid sm:grid-cols-2 gap-8 col-span-3 container-card">
       <div class="flex flex-col justify-between">
         <div>
           <p class="text-[#A0AEC0] text-xs">Built by developers</p>

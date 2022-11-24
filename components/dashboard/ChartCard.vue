@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col xl:grid xl:grid-cols-5 gap-5">
     <!-- chart 1 -->
-    <div class="xl:col-span-2 container-card flex flex-col justify-center">
+    <div class="xl:col-span-2 container-card">
       <client-only>
-        <div class="flex flex-col items-center justify-center">
+        <div class="grid grid-cols-1 w-full">
           <BarChart
             :data="chartData"
             :height="200"
-            class="w-[370px] md:w-full bar-chart-bg p-5 rounded-[15px]"
+            class="w-[100%] md:w-full bar-chart-bg p-5 rounded-[15px]"
           />
         </div>
       </client-only>
@@ -44,13 +44,9 @@
       <p class="text-sm mt-1.5 text-[#2D3748] mb-[41px]">
         <span class="text-[#48BB78]">(+23)</span> than last week
       </p>
-      <div class="flex flex-col items-center justify-center">
+      <div class="grid grid-cols-1 w-full">
         <client-only>
-          <LineChart
-            :data="chartDataLine"
-            :height="296"
-            class="w-[370px] md:w-full"
-          />
+          <LineChart :data="chartDataLine" :height="296" />
         </client-only>
       </div>
     </div>
