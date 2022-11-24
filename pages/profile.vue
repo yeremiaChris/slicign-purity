@@ -1,43 +1,125 @@
 <template>
-  <div class="relative -mt-[60px] mx-5 z-0 p-4">
-    <!-- profile info -->
-    <div class="z-10 w-full relative flex-items-center justify-between">
-      <div class="flex-items-center gap-3">
-        <img
-          src="https://picsum.photos/80/80"
-          class="h-[80px] w-[80px] rounded-xl"
-          alt="profile"
-        />
-        <div>
-          <h2 class="title font-bold text-[#2D3748]">Esthera Jackson</h2>
-          <h3 class="text-sm text-[#718096]">esthera@simmmple.com</h3>
+  <div class="grid gap-4">
+    <ProfileElement />
+
+    <!-- 3 boxes -->
+
+    <div class="grid grid-cols-3 gap-4">
+      <!-- first box -->
+      <div class="container-card">
+        <MiscTitle title="Platform Settings" />
+
+        <!-- list switch -->
+
+        <div
+          v-for="(item, index) in platformSettingsItem"
+          :key="item.title"
+          class="flex flex-col gap-5"
+          :class="{ 'mb-5': index === 0 }"
+        >
+          <h2 class="text-[#A0AEC0] text-[10px] font-bold uppercase">
+            {{ item.title }}
+          </h2>
+          <MiscToggle
+            v-model="child.value"
+            v-for="child in item.child"
+            :key="child.title"
+            :title="child.title"
+          />
         </div>
       </div>
 
-      <!-- button -->
-      <div class="flex gap-2 text-[10px]">
-        <button
-          :class="`shadow-smooth ${
-            item <= 1 && 'bg-white'
-          } py-[10px] px-7 rounded-xl flex-items-center gap-2`"
-          v-for="item in 3"
-          :key="item"
-        >
-          <img src="/main/overview.png" :alt="'overview' + item" />
-          Overview
-        </button>
-        <!-- <button class="shadow-smooth bg-white py-[10px] px-7 rounded-xl">Overview</button>
-        <button >Overview</button> -->
+      <!-- second box -->
+      <div class="container-card">
+        <MiscTitle title="Profile Information" />
+        <p class="text-[#A0AEC0] text-xs">
+          Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is
+          no. If two equally difficult paths, choose the one more painful in the
+          short term (pain avoidance is creating an illusion of equality).
+        </p>
+        <MiscLine class="my-[35px]" />
+        <div class="grid gap-[18px]">
+          <div
+            v-for="(value, key) in profileInformation"
+            :key="key"
+            class="text-[#718096] font-bold text-xs flex-items-center gap-2"
+          >
+            {{ toTitle(key) }}:
+            <span v-if="key !== 'socialMedia'">
+              <span class="text-[#A0AEC0]">{{ value }}</span></span
+            >
+            <img
+              v-else
+              v-for="item in value"
+              :key="item"
+              :src="`/main/${item}.png`"
+              :alt="item"
+            />
+          </div>
+        </div>
       </div>
+      <div>fds</div>
     </div>
-
-    <!-- bg-white opacity -->
-    <div class="absolute inset-0 container-card opacity-70" />
   </div>
 </template>
 
 <script>
 export default {
   layout: "profile",
+  data() {
+    return {
+      profileInformation: {
+        fullName: "Alec M. Thompson",
+        mobile: "(44) 123 1234 123",
+        email: "alecthompson@mail.com",
+        location: "United States",
+        socialMedia: ["facebook", "twitter", "instagram"],
+      },
+      platformSettingsItem: [
+        {
+          title: "Account",
+          child: [
+            {
+              title: "Email me when someone follows me",
+              value: true,
+            },
+            {
+              title: "Email me when someone answers on my post",
+              value: false,
+            },
+            {
+              title: "Email me when someone mentions me",
+              value: true,
+            },
+          ],
+        },
+        {
+          title: "Application",
+          child: [
+            {
+              title: "New launches and projects",
+              value: false,
+            },
+            {
+              title: "Monthly product updates",
+              value: false,
+            },
+            {
+              title: "Subscribe to newsletter",
+              value: true,
+            },
+          ],
+        },
+      ],
+    };
+  },
+  methods: {
+    toTitle(text) {
+      return text
+        .split(/(?=[A-Z])/)
+        .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
+        .join(" ");
+    },
+  },
 };
 </script>

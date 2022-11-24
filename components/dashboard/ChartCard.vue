@@ -86,6 +86,7 @@ export default {
               "linear-gradient(180deg, rgba(79, 209, 197, 0.54) 0%, rgba(79, 209, 197, 0) 100%)",
             borderColor: "black",
             borderWidth: 2,
+            radius: 0,
           },
           {
             label: "",
@@ -93,6 +94,7 @@ export default {
             backgroundColor: "rgba(79, 209, 197, 0.2)",
             borderColor: "#4FD1C5",
             borderWidth: 2,
+            radius: 0,
           },
         ],
       };
