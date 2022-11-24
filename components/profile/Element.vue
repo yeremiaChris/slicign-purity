@@ -1,7 +1,9 @@
 <template>
   <div class="relative -mt-[60px] mx-5 z-0 p-4">
     <!-- profile info -->
-    <div class="z-10 w-full relative flex-items-center justify-between">
+    <div
+      class="z-10 w-full relative grid gap-5 lg:flex items-center justify-between"
+    >
       <div class="flex-items-center gap-3">
         <img
           src="https://picsum.photos/80/80"
@@ -15,12 +17,12 @@
       </div>
 
       <!-- button -->
-      <div class="flex gap-2 text-[10px]">
+      <div class="flex flex-col sm:flex-row gap-2 text-[10px]">
         <button
           v-for="(item, index) in actions"
           :key="item"
           :class="`shadow-smooth ${
-            index <= 0 && 'bg-white'
+            index <= 0 && 'bg-gray-100 lg:bg-white'
           } py-[10px] px-7 rounded-xl hover:bg-white flex-items-center gap-2 uppercase`"
         >
           <img src="/main/overview.png" :alt="item" />
