@@ -5,8 +5,8 @@
       Enter your email and password to sign in
     </h2>
     <div class="grid gap-6">
-      <MiscInput label="Email" />
-      <MiscInput label="Password" />
+      <MiscInput label="Email" placeholder="Your email address" />
+      <MiscInput label="Password" placeholder="Your password" />
       <MiscToggle
         v-model="isRemember"
         title="Remember me"

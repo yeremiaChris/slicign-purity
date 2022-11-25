@@ -1,10 +1,15 @@
 <template>
   <div class="relative">
-    <label v-if="label" :for="id" class="text-sm text-[#2D3748] mb-[5.5px]">{{
+    <label v-if="label" :for="id" class="text-sm text-[#2D3748]">{{
       label
     }}</label>
-    <div v-if="icon" class="container-icon left-0 pl-5 mb-[3px]">
-      <img v-if="icon !== 'paypal'" :src="`/main/${icon}.png`" alt="icon" />
+    <div v-if="icon" class="container-icon pl-5 mb-[3px]">
+      <img
+        v-if="icon !== 'paypal'"
+        class=""
+        :src="`/main/${icon}.png`"
+        alt="icon"
+      />
       <div
         v-else
         v-for="item in 2"
@@ -18,11 +23,21 @@
       type="text"
       :name="id"
       :id="id"
-      class="focus:outline-none border block w-full rounded-[15px] border-[#E2E8F0] shadow-sm py-[22.75px] pr-5 focus:ring-0 sm:text-sm"
-      :class="{ 'pl-14': icon, 'pl-5': !icon }"
+      :class="`${
+        icon === 'visa' || icon === 'paypal'
+          ? 'pl-14'
+          : !icon
+          ? 'pl-5'
+          : 'pl-10'
+      } focus:outline-none border block w-full rounded-[15px] border-[#E2E8F0] shadow-sm ${
+        !isSearch ? 'py-[22.75px]' : 'py-[10px]'
+      } pr-5 focus:ring-0 sm:text-sm`"
       :placeholder="placeholder"
     />
-    <div class="container-icon right-0 pr-5" v-if="icon">
+    <div
+      class="container-icon right-0 pr-5"
+      v-if="icon === 'paypal' || icon === 'visa'"
+    >
       <img src="/main/edit.png" alt="edit" />
     </div>
   </div>
@@ -46,6 +61,10 @@ export default {
     label: {
       type: String,
       default: () => "",
+    },
+    isSearch: {
+      type: Boolean,
+      default: () => false,
     },
   },
 };

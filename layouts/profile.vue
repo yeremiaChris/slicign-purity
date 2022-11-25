@@ -3,10 +3,13 @@
     <Sidebar class="hidden md:block" />
     <div class="container">
       <div
-        class="relative flex justify-between bg-[#4FD1C5] rounded-[15px] p-4 text-white h-[200px]"
+        class="relative flex justify-between items-start bg-[#4FD1C5] rounded-[15px] p-4 text-white h-[200px]"
       >
         <Breadcrumb class="mb-5" />
-        <div>fsdfs</div>
+        <NavbarMenu />
+
+        <!-- humburger menu -->
+        <MiscBurgerButton />
 
         <!-- bg-wave -->
         <img class="absolute inset-0" src="/main/bg-wave.png" alt="bg-wave" />

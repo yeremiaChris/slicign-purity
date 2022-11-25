@@ -8,7 +8,7 @@
 
     <!-- input -->
     <div
-      class="w-[452px] mt-[66.5px] shadow-soft p-4 bg-white rounded-[15px] text-left m-auto"
+      class="w-full sm:w-[452px] mt-[66.5px] shadow-soft p-4 bg-white rounded-[15px] text-left m-auto"
     >
       <div class="grid gap-6 px-6 py-6">
         <h2 class="text-center text-lg font-bold text-[#2D3748]">
@@ -24,9 +24,9 @@
           </div>
         </div>
         <h2 class="text-lg font-bold text-[#A0AEC0] text-center">or</h2>
-        <MiscInput label="Name" />
-        <MiscInput label="Email" />
-        <MiscInput label="Password" />
+        <MiscInput label="Name" placeholder="Your full name" />
+        <MiscInput label="Email" placeholder="Your email address" />
+        <MiscInput label="Password" placeholder="Your password" />
         <MiscToggle
           v-model="isRemember"
           title="Remember me"
