@@ -22,7 +22,7 @@
           :alt="item.title"
         />
       </div>
-      <p :class="{ 'text-[#A0AEC0]': !isActiveRoute(item.path) }">
+      <p :class="{ 'text-[#A0AEC0]': !isActiveRoute(item.path) && !isMobile }">
         {{ item.title }}
       </p>
     </NuxtLink>
@@ -35,6 +35,10 @@ export default {
     data: {
       type: Array,
       required: true,
+    },
+    isMobile: {
+      type: Boolean,
+      default: () => false,
     },
   },
 

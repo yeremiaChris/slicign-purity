@@ -13,5 +13,6 @@
       <Nuxt />
       <Footer />
     </div>
+    <MobileMenu />
   </div>
 </template>

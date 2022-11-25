@@ -1,6 +1,7 @@
 <template>
   <button
     class="md:hidden rounded-full border px-2 py-2 box-center mb-7 shadow-soft"
+    @click="handleClick"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +21,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    handleClick() {
+      const payload = {
+        props: "isMobile",
+        value: true,
+      };
+      this.$store.commit("setProps", payload);
+    },
+  },
+};
 </script>
-
-<style></style>
