@@ -3,6 +3,7 @@
     <NuxtLink
       v-for="(item, index) in data"
       :key="item.title + index"
+      @click.native="handleClick"
       :to="item.path"
       class="flex-items-center gap-3 p-3 rounded-[15px] mb-2 hover:bg-white hover:shadow-smooth"
       :class="{ 'bg-white shadow-smooth': isActiveRoute(item.path) }"
@@ -49,6 +50,14 @@ export default {
 
     toIconTitle(title) {
       return title.split(" ").join("-").toLowerCase();
+    },
+
+    handleClick() {
+      const payload = {
+        props: "isMobile",
+        value: false,
+      };
+      this.$store.commit("setProps", payload);
     },
   },
 };
