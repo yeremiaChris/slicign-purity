@@ -1,18 +1,27 @@
 <template>
   <div
-    class="navbar-bg py-6 px-[23px] rounded-[15px] shadow-soft flex flex-col gap-5 md:flex-row justify-between"
+    :class="`${bgShadowAndColor} py-6 px-[23px] rounded-[15px] flex flex-col gap-5 md:flex-row justify-between`"
   >
     <div class="flex-items-center gap-8">
-      <img src="logo.png" alt="logo" />
+      <img
+        :src="`${$route.path === '/sign-in' ? 'logo' : 'logo-white'}.png`"
+        alt="logo"
+      />
       <h2 class="font-bold text-sm mt-1">PURITY UI DASHBOARD</h2>
     </div>
     <ul
-      class="hidden md:flex items-center uppercase gap-9 text-[10px] text-[#2D3748] font-bold"
+      :class="`hidden md:flex items-center uppercase gap-9 text-[10px] ${
+        $route.path === '/sign-in' ? `text-[#2D3748]` : 'text-white'
+      } font-bold`"
     >
       <NuxtLink v-for="item in data" :key="item.title" :to="item.link">
         <li class="flex items-center gap-1.5">
           <img
-            :src="`/auth/${item.title.toLowerCase()}.png`"
+            :src="`/auth/${
+              $route.path === '/sign-up'
+                ? item.title.toLowerCase() + '-white'
+                : item.title.toLowerCase()
+            }.png`"
             :alt="item.title"
           />
           <p class="mt-1.5">
@@ -23,7 +32,11 @@
     </ul>
 
     <button
-      class="bar-chart-bg text-[10px] text-white rounded-[34.5px] py-[10px] px-[30.25px] font-bold"
+      :class="`${
+        $route.path === '/sign-up'
+          ? 'bg-white text-[#2D3748]'
+          : 'bar-chart-bg text-white'
+      } text-[10px]  rounded-[34.5px] py-[10px] px-[30.25px] font-bold`"
     >
       Free Download
     </button>
@@ -32,6 +45,12 @@
 
 <script>
 export default {
+  props: {
+    bgShadowAndColor: {
+      type: String,
+      default: () => "navbar-bg shadow-soft",
+    },
+  },
   data() {
     return {
       data: [
