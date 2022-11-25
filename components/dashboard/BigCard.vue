@@ -2,7 +2,7 @@
   <div class="flex flex-col lg:grid lg:grid-cols-5 gap-5 h-full w-full">
     <!-- card 1 -->
     <div class="grid sm:grid-cols-2 gap-8 col-span-3 container-card">
-      <div class="flex flex-col justify-between">
+      <div class="flex flex-col justify-between gap-4">
         <div>
           <p class="text-[#A0AEC0] text-xs">Built by developers</p>
           <h2 class="text-[#'2D3748'] title">Purity UI Dashboard</h2>
@@ -18,11 +18,7 @@
       <div
         class="w-full font-bold text-3xl gap-4 bg-[#4FD1C5] rounded-lg h-[255px] lg:h-full box-center text-xl text-white"
       >
-        <img
-          class="w-10"
-          src="/main/chakra-ui.png"
-          alt="chakra-ui-logo"
-        />chakra
+        <img class="w-1/2" src="/main/logo-chakra.png" alt="chakra-ui-logo" />
       </div>
     </div>
 
