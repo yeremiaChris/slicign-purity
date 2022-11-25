@@ -5,8 +5,11 @@
       'mb-[400%] -mt-[400%] fixed': !isMobile,
     }"
   >
-    <div class="flex justify-end shadow-soft">
-      <button class="border px-1 py-1 rounded-full mb-2" @click="handleClick">
+    <div class="flex justify-end">
+      <button
+        class="border px-1 py-1 shadow-soft rounded-full mb-2"
+        @click="handleClick"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
